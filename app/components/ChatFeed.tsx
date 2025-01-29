@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import { useState, useEffect, useCallback, useRef } from "react";
 import { useWindowSize } from "usehooks-ts";
-import Image from "next/image";
 import { useAtom } from "jotai/react";
 import { contextIdAtom } from "../atoms";
 import posthog from "posthog-js";

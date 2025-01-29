@@ -4,7 +4,6 @@ import { useState, useEffect, useCallback } from "react";
 import { AnimatePresence } from "framer-motion";
 import ChatFeed from "./components/ChatFeed";
 import AnimatedButton from "./components/AnimatedButton";
-import Image from "next/image";
 import posthog from "posthog-js";
 
 const Tooltip = ({
