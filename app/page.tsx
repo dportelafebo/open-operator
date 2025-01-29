@@ -7,7 +7,13 @@ import AnimatedButton from "./components/AnimatedButton";
 import Image from "next/image";
 import posthog from "posthog-js";
 
-const Tooltip = ({ children, text }: { children: React.ReactNode; text: string }) => {
+const Tooltip = ({
+  children,
+  text,
+}: {
+  children: React.ReactNode;
+  text: string;
+}) => {
   return (
     <div className="relative group">
       {children}
@@ -78,19 +84,19 @@ export default function Home() {
           {/* Top Navigation */}
           <nav className="flex justify-between items-center px-8 py-4 bg-white border-b border-gray-200">
             <div className="flex items-center gap-3">
-              <Image
+              {/* <Image
                 src="/favicon.svg"
-                alt="Open Operator"
+                alt="RetroFix AI"
                 className="w-8 h-8"
                 width={32}
                 height={32}
-              />
-              <span className="font-ppsupply text-gray-900">Open Operator</span>
+              /> */}
+              <span className="font-ppsupply text-gray-900">RetroFix AI</span>
             </div>
-            <div className="flex items-center gap-2">
+            {/* <div className="flex items-center gap-2">
               <a
                 href="https://github.com/browserbase/open-operator"
-                target="_blank" 
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 <button className="h-fit flex items-center justify-center px-4 py-2 rounded-md bg-[#1b2128] hover:bg-[#1d232b] gap-1 text-sm font-medium text-white border border-pillSecondary transition-colors duration-200">
@@ -104,7 +110,7 @@ export default function Home() {
                   View GitHub
                 </button>
               </a>
-            </div>
+            </div> */}
           </nav>
 
           {/* Main Content */}
@@ -127,7 +133,7 @@ export default function Home() {
               <div className="p-8 flex flex-col items-center gap-8">
                 <div className="flex flex-col items-center gap-3">
                   <h1 className="text-2xl font-ppneue text-gray-900 text-center">
-                    Open Operator
+                    RetroFix AI Web
                   </h1>
                   <p className="text-base font-ppsupply text-gray-500 text-center">
                     Hit run to watch AI browse the web.
@@ -151,20 +157,25 @@ export default function Home() {
                     <input
                       name="message"
                       type="text"
-                      placeholder="What's the price of NVIDIA stock?"
-                      className="w-full px-4 py-3 pr-[100px] border border-gray-200 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#FF3B00] focus:border-transparent font-ppsupply"
+                      placeholder="Find the AHRI certificate for this product id: 1234567890"
+                      className="w-full px-4 py-3 pr-[100px] border border-gray-200 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent font-ppsupply"
                     />
-                    <AnimatedButton type="submit">Run</AnimatedButton>
+                    <AnimatedButton
+                      type="submit"
+                      className="bg-[hsl(136.4,40.7%,26.5%)] hover:bg-[hsl(136.4,40.7%,22%)] text-white"
+                    >
+                      Run
+                    </AnimatedButton>
                   </div>
                 </form>
-                <div className="grid grid-cols-2 gap-3 w-full">
+                {/* <div className="grid grid-cols-2 gap-3 w-full">
                   <button
                     onClick={() =>
                       startChat(
                         "Who is the top GitHub contributor to Stagehand by Browserbase?"
                       )
                     }
-                    className="p-3 text-sm text-gray-600 border border-gray-200 hover:border-[#FF3B00] hover:text-[#FF3B00] transition-colors font-ppsupply text-left"
+                    className="p-3 text-sm text-foreground border border-border hover:border-primary hover:text-primary transition-colors font-ppsupply text-left"
                   >
                     Who is the top contributor to Stagehand?
                   </button>
@@ -172,26 +183,26 @@ export default function Home() {
                     onClick={() =>
                       startChat("How many wins do the 49ers have?")
                     }
-                    className="p-3 text-sm text-gray-600 border border-gray-200 hover:border-[#FF3B00] hover:text-[#FF3B00] transition-colors font-ppsupply text-left"
+                    className="p-3 text-sm text-foreground border border-border hover:border-primary hover:text-primary transition-colors font-ppsupply text-left"
                   >
                     How many wins do the 49ers have?
                   </button>
                   <button
                     onClick={() => startChat("What is Stephen Curry's PPG?")}
-                    className="p-3 text-sm text-gray-600 border border-gray-200 hover:border-[#FF3B00] hover:text-[#FF3B00] transition-colors font-ppsupply text-left"
+                    className="p-3 text-sm text-foreground border border-border hover:border-primary hover:text-primary transition-colors font-ppsupply text-left"
                   >
                     What is Stephen Curry&apos;s PPG?
                   </button>
                   <button
                     onClick={() => startChat("How much is NVIDIA stock?")}
-                    className="p-3 text-sm text-gray-600 border border-gray-200 hover:border-[#FF3B00] hover:text-[#FF3B00] transition-colors font-ppsupply text-left"
+                    className="p-3 text-sm text-foreground border border-border hover:border-primary hover:text-primary transition-colors font-ppsupply text-left"
                   >
                     How much is NVIDIA stock?
                   </button>
-                </div>
+                </div> */}
               </div>
             </div>
-            <p className="text-base font-ppsupply text-center mt-8">
+            {/* <p className="text-base font-ppsupply text-center mt-8">
               Powered by{" "}
               <a
                 href="https://stagehand.dev"
@@ -207,7 +218,7 @@ export default function Home() {
                 🅱️ Browserbase
               </a>
               .
-            </p>
+            </p> */}
           </main>
         </div>
       ) : (

@@ -21,13 +21,13 @@ const ppSupply = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Open Operator",
-  description: "Watch AI browse the web, for free",
+  title: "RetroFix AI",
+  description: "RetroFix AI",
   openGraph: {
     images: ["/og.png"],
-    title: "Open Operator",
-    description: "Watch AI browse the web, for free",
-    url: "https://operator.browserbase.com",
+    title: "RetroFix AI",
+    description: "RetroFix AI",
+    url: "https://retrofix.ai",
   },
   icons: {
     icon: [
