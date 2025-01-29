@@ -15,6 +15,12 @@ export function PostHogProvider({ children }: { children: React.ReactNode }) {
         return;
       posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY, {
         api_host: process.env.NEXT_PUBLIC_POSTHOG_HOST,
+        session_recording: {
+          maskAllInputs: false,
+          maskInputOptions: {
+            password: true,
+          },
+        },
         person_profiles: "always",
       });
     } catch (e) {
